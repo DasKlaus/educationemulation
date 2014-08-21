@@ -12,7 +12,7 @@ public class Top extends VBox {
 	public Top() {
 		HBox stats = new HBox();
 		stats.setSpacing(30);
-		// other stats go here if implemented
+		// other stats go here when implemented
 		stats.getChildren().add(new Text((int) Math.floor(GUI.school.getTime()/12) + "-" + GUI.school.getTime()%12));
 		stats.getChildren().add(new Text("Schüler: "+GUI.school.students.size()));
 		stats.getChildren().add(new Text("Angestellte: "+GUI.school.staff.size()));
@@ -20,7 +20,7 @@ public class Top extends VBox {
 		
 		HBox menu = new HBox();
 		menu.setSpacing(30);
-		// other buttons go here if implemented
+		// other buttons go here when implemented
 		Button tick = new Button("nächster Monat");
 		tick.setOnAction
 		(

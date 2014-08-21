@@ -23,8 +23,7 @@ public class Course implements Tickable {
 		this.teacher = teacher;
 		this.subject = subject;
 		this.level = level;
-		this.speed = speed;
-		this.name = name;
+		this.speed = speed;	this.name = name;
 		this.students = students;
 		GUI.school.time.addObserver(this);
 	}

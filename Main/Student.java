@@ -146,7 +146,8 @@ public class Student implements Tickable {
 					} else {
 						ArrayList<Student> students = new ArrayList<Student>();
 						students.add(this);
-						GUI.school.courses.add(new Course(course.teacher, course.subject, course.level-(12*course.speed), course.speed, "a", students)); 
+						newCourse = new Course(course.teacher, course.subject, course.level-(12*course.speed), course.speed, "a", students); 
+						GUI.school.courses.add(newCourse);
 					}
 					GUI.school.log.add(new LogEvent(EventType.RETENTION, this, course, newCourse));
 				}

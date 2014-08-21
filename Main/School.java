@@ -12,7 +12,7 @@ import Staff.Teacher;
 
 public class School implements Tickable, Observer {
 
-	public Ticker time;
+	public Ticker time; // in months since simulation start
 	
 	public ArrayList<Student> students;
 	public ArrayList<Staff> staff;
@@ -71,7 +71,8 @@ public class School implements Tickable, Observer {
 		log.add(new LogEvent(EventType.NEWSTUDENTS, newStudentCount, newStudents));
 		for (int i=0; i<subjects.size(); i++) {
 			try {
-				// TODO: only add eligible students! check requirements and find students who don't have this course yet but need it
+				// TODO: only add eligible students! 
+				// TODO: check requirements and find students who don't have this course yet but need it
 				courses.add(new Course(Teacher.findTeacher(subjects.get(i)), subjects.get(i), 0, 3, "a", (ArrayList<Student>) newStudents.clone()));
 				log.add(new LogEvent(EventType.STARTCOURSE, courses.get(courses.size()-1), true));
 			} catch (Exception e) {

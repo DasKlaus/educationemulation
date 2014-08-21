@@ -10,7 +10,7 @@ import javafx.scene.text.Text;
 
 public class Logger extends VBox implements TickBox{
 	
-	// TODO: This *has* to have its own menu as well as a ScrollPane
+	// TODO: needs its own menu as well as a ScrollPane
 	HBox menu;
 	ScrollPane container;
 	
@@ -38,6 +38,7 @@ public class Logger extends VBox implements TickBox{
 					for (int j=0; j<event.students.size(); j++) {
 						line.getChildren().add(new StudentButton(event.students.get(i).name, event.students.get(i)));
 					}
+					// TODO: list new students instead
 					break;
 				case RETENTION:
 					line.getChildren().addAll(new StudentButton(event.students.get(0).name, event.students.get(0)),

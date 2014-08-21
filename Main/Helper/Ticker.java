@@ -11,6 +11,7 @@ public class Ticker extends Observable {
 	
 	public void tick() {
 		time++;
+		setChanged();
 		Boolean newYear = (time%12==0)?true:false;
 		notifyObservers(newYear);
 	}
